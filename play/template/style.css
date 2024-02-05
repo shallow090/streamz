@@ -1,0 +1,301 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+
+ @font-face {
+     font-family: Cyber;
+     src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+     font-display: swap;
+   }
+   
+   * {
+     box-sizing: border-box;
+   }
+   body {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     justify-content: center;
+     min-block-size: 100vh;
+     font-family: 'Cyber', sans-serif;
+     background: linear-gradient(90deg, rgb(255, 255, 252) 70%, #f7f7f7 70%), #979797;
+   }
+   
+   a{
+     text-decoration: none;
+     color: rgb(161, 159, 159);
+   }
+ body{
+     block-size: 100vh;
+     display: flex;
+     background-image: var(--bg-color);
+     transition: background-image 1s;
+     background-size: 500%;
+     flex-direction: column;
+     margin: 0;
+     padding: 0;
+     align-items: center;
+     justify-content: center;
+     animation: move 20s alternate infinite;
+ }
+ 
+ body.dark {
+     background-image: radial-gradient(#221f22, #1E1E1E);
+ }
+ 
+ header {
+     position: absolute;
+     inset-block-start: 0;
+     justify-content: center;
+     flex-direction: row;
+     align-items: center;
+     inline-size: 100%;
+ }
+ 
+ .toogle{
+    z-index: 1;
+     position: absolute;
+     margin: 1%;
+     inset-inline-end: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     inline-size: 3.5vh;
+     block-size: 3.5vh;
+     background-color: aliceblue;
+     cursor: pointer;
+     border-radius: 50%;
+ 
+ }
+ 
+ .toogle:before{
+     content: "\f186";
+     font-size: 2vh;
+     font-family: 'Font Awesome\ 5 Free';
+ }
+ 
+ body.dark .toogle:before {
+     content: '\f185';
+ }
+ 
+ #file-name {
+     display: flex;
+     text-align: center;
+     justify-content: center;
+     color: var(--filename-color);
+     font-size: 2rem;
+     font-family: 'Raleway', sans-serif;
+ }
+ 
+ #file-name.dark {
+     color: white;
+ }
+ .container{
+     padding-block-start: 1%;
+     text-align: center;
+     vertical-align: middle;
+     inline-size: 65%;
+ }
+ 
+ 
+ @media only screen and (max-inline-size: 900px) {
+     .container {
+         inline-size: 90%;
+     }
+     #file-name{
+       font-size: 4vh;
+     }
+ }
+ footer {
+     block-size: 1.5rem;
+     padding-inline-start: 100px;
+     padding-inline-end: 30px;
+     position: fixed;
+     justify-content: flex-end;
+     align-items: center;
+     inline-size: 100%;
+     inset-inline-end: 0px;
+     inset-block-end: 0;
+     /* background-color: white; */
+     font-family: Delius;
+     display: flex;
+     border-block-start: 1px solid var(--border-color);
+     box-sizing: border-box;
+ }
+ 
+ footer.dark {
+     background-color: var(--footer-color);
+ }
+ 
+ svg#octo {
+     inline-size: 1.2rem;
+     padding-inline-start: 5px;
+     fill: var(--footer-icon-color)
+ }
+ 
+ svg:hover {
+     padding-block-end: 8px;
+     transition: 0.3s;
+ }
+ 
+ #fork-text{
+     color: var(--footer-font-color);
+     font-size: 1.1rem;
+ }        
+ 
+ #copyright-text{
+     color: var(--footer-font-color);
+     font-size: 1.1rem;
+ }
+ 
+ .plyr--full-ui input[type=range] {
+     color: var(--player-hover-color);
+ }
+ .plyr__control--overlaid {
+     background: #1E1E1E;
+ }
+ 
+ .plyr--video .plyr__control.plyr__tab-focus,
+ .plyr--video .plyr__control:hover,
+ .plyr--video .plyr__control[aria-expanded=true] {
+     background: var(--player-hover-color);
+ }
+ 
+ .plyr__control.plyr__tab-focus {
+     box-shadow: 0 0 0 5px ;
+ }
+ 
+ .plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {
+     background: violet;
+ }
+ .btn-17,
+.btn-17 *,
+.btn-17 :after,
+.btn-17 :before,
+.btn-17:after,
+.btn-17:before {
+  border: 0 solid;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.btn-17 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+.btn-17:disabled {
+  cursor: default;
+}
+.btn-17:-moz-focusring {
+  outline: auto;
+}
+.btn-17 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-17 [hidden] {
+  display: none;
+}
+.btn-17 {
+  border-radius: 99rem;
+  border-width: 2px;
+  padding: 0.8rem 3rem;
+  z-index: 0;
+}
+.btn-17,
+.btn-17 .text-container {
+  overflow: hidden;
+  position: relative;
+}
+.btn-17 .text-container {
+  display: block;
+  mix-blend-mode: difference;
+}
+.btn-17 .text {
+  display: block;
+  position: relative;
+}
+.btn-17:hover .text {
+  -webkit-animation: move-up-alternate 0.3s forwards;
+  animation: move-up-alternate 0.3s forwards;
+}
+@-webkit-keyframes move-up-alternate {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(80%);
+            transform: translateY(80%);
+  }
+  51% {
+    -webkit-transform: translateY(-80%);
+            transform: translateY(-80%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes move-up-alternate {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(80%);
+            transform: translateY(80%);
+  }
+  51% {
+    -webkit-transform: translateY(-80%);
+            transform: translateY(-80%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.btn-17:after,
+.btn-17:before {
+  --skew: 0.2;
+  background: #fff;
+  content: "";
+  display: block;
+  block-size: 102%;
+  inset-inline-start: calc(-50% - 50% * var(--skew));
+  pointer-events: none;
+  position: absolute;
+  inset-block-start: -104%;
+  -webkit-transform: skew(calc(150deg * var(--skew))) translateY(var(--progress, 0));
+      -ms-transform: skew(calc(150deg * var(--skew))) translateY(var(--progress, 0));
+          transform: skew(calc(150deg * var(--skew))) translateY(var(--progress, 0));
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  inline-size: 100%;
+}
+.btn-17:after {
+  --progress: 0%;
+  inset-inline-start: calc(50% + 50% * var(--skew));
+  inset-block-start: 102%;
+  z-index: -1;
+}
+.btn-17:hover:before {
+  --progress: 100%;
+}
+.btn-17:hover:after {
+  --progress: -102%;
+}

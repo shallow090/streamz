@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>%s</title>
+    <link rel="stylesheet" type='text/css' href="style.css">
+</head>
+<body class='cyber'>
+    <header>
+        <div class="toogle"></div>
+        <div id="file-name" class="cyber">
+            <h1>%s</h1>
+        </div>
+    </header>
+    <div class="container">
+        <a href=%s>
+            <button class="btn-17">
+                <span class="text-container">
+                  <span class="text">Download</span>
+                </span>
+              </button>
+        </a>
+    </div>
+    <footer>
+	    <align="left"><a href="https://telegram.me/shadow_stream_bot" style="color:rgb(255, 123, 0)" >Join My Telegram Bot &emsp; &emsp;</a></align>
+    </footer>
+    <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+	<script>
+        const controls = [
+              'play-large',
+              'rewind',
+              'play', 
+              'fast-forward', 
+              'progress', 
+              'current-time',
+              'duration',
+              'mute',
+              'volume',
+              'captions',
+              'settings',
+              'pip',
+              'airplay',
+              'download',
+              'fullscreen'
+            ];
+        document.addEventListener('DOMContentLoaded', () => {
+            const player = Plyr.setup('.player', { controls });
+        });
+
+        const body = document.querySelector('body');
+        const title = document.querySelector('#file-name');
+        const footer = document.querySelector('footer');
+        const toogle = document.querySelector('.toogle');
+        toogle.onclick = () => {
+            body.classList.toggle('dark')
+            footer.classList.toggle('dark')
+            title.classList.toggle('dark')
+        }
+    </script>
+</body>
+</html>

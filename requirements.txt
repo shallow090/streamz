@@ -1,5 +1,4 @@
-python<=3.10
-python3.10
+python_version == 3.10
 pyrogram<=2.0.33
 tgcrypto<=1.2.3
 aiohttp<=3.8.1

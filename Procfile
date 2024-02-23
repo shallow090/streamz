@@ -1,2 +1,2 @@
-web: python -m play
+web: python3.10 -m play
  

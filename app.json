@@ -91,7 +91,7 @@
       }
   },
   "buildpacks": [{
-      "url": "heroku/python"
+      "url": "koyeb/python3.10"
     }],
   "formation": {
       "web": {

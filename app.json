@@ -90,13 +90,15 @@
           "required": false
       }
   },
-  "buildpacks": [{
-      "url": "koyeb/python3.10"
-    }],
+  "buildpacks": [
+    {
+      "url": "https://github.com/koyeb/heroku-buildpack-python.git"
+    }
+  ],
   "formation": {
-      "web": {
-          "quantity": 1,
-          "size": "free"
-      }
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
   }
 }
